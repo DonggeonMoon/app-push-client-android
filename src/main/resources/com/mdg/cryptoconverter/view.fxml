@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mdg.cryptoconverter.ConverterController">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label text="Crypto converter"/>
+    <HBox alignment="CENTER">
+        <TextArea fx:id="textFieldToEncrypt" prefWidth="350" prefHeight="200"
+                  onMouseClicked="#onTextToBeEncryptedFieldFocused"/>
+        <VBox alignment="CENTER">
+            <Button text="암호화" onAction="#onEncryptionButtonClick"/>
+            <Button text="지우기" onAction="#onResetEncryptionButtonClick"/>
+        </VBox>
+        <TextArea fx:id="encryptedTextField" prefWidth="350" prefHeight="200"
+                  onMouseClicked="#onEncryptedTextFieldFocused"/>
+    </HBox>
+
+    <HBox alignment="CENTER">
+        <TextArea fx:id="textFieldToDecrypt" prefWidth="350" prefHeight="200"
+                  onMouseClicked="#onTextToBeDecryptedFieldFocused"/>
+        <VBox alignment="CENTER">
+            <Button text="복호화" onAction="#onDecryptionButtonClick"/>
+            <Button text="지우기" onAction="#onResetDecryptionButtonClick"/>
+        </VBox>
+        <TextArea fx:id="decryptedTextField" prefWidth="350" prefHeight="200"
+                  onMouseClicked="#onDecryptedTextFieldFocused"/>
+    </HBox>
+
+    <Label fx:id="copiedAlertLabel"/>
+
+</VBox>
