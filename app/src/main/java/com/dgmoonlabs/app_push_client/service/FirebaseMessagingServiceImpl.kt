@@ -10,7 +10,7 @@ import com.google.firebase.messaging.RemoteMessage
 
 class FirebaseMessagingServiceImpl : FirebaseMessagingService() {
     override fun onNewToken(token: String) {
-        super.onNewToken(token);
+        super.onNewToken(token)
         Log.d(TAG, "Refreshed token: $token")
 
         Toast.makeText(baseContext, token, Toast.LENGTH_SHORT).show()
